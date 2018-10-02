@@ -26,13 +26,15 @@ class MyModal extends React.Component {
     return (
       <div>
         <Button type={this.props.type || 'primary'} onClick={this.showModal}>
-          {this.props.titulo || 'Modal'}
+          {this.props.label || 'Label'}
         </Button>
         <Modal
-          title="Basic Modal"
+          destroyOnClose={true}
+          title={this.props.titulo}
           visible={this.state.visible}
           onOk={this.handleOk}
           onCancel={this.handleCancel}
+          footer={null}
         >
           {this.props.children}
         </Modal>
