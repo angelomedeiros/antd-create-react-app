@@ -1,6 +1,7 @@
 import React from 'react'
 import { Row, Col, Divider } from 'antd'
 import MyModal from '../common/components/myModal'
+import FormSignin from './formSignin'
 
 export default props => (
   <Row type='flex' className='header' align="middle" justify="space-between">
@@ -8,8 +9,8 @@ export default props => (
       <h1>Issues</h1>
     </Col>
     <Col>
-      <MyModal titulo='Sign Up'>
-        a
+      <MyModal titulo='Sign In' label='Sign In'>
+        <FormSignin angelo='angelo' />
       </MyModal>
     </Col>
     <Divider style={{ margin: '12px 0'  }} />
